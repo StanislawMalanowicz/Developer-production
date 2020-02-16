@@ -49,6 +49,7 @@ body{
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 10;
 }
 .flat-card .title{
   display: flex;
@@ -62,7 +63,7 @@ body{
   border: solid;
   
 } */
-.flat-card .title .flat-number{
+.flat-number{
   width: 70px;
   height: 40px;
   border-radius: 8px;
@@ -87,7 +88,7 @@ margin: 20px 0;
 }
 .flat-card .pdf{
   width: 100%;
-  background: gray;
+  background: rgb(218, 207, 207);
   border-radius: 15px;
   height: 40px; 
   display: flex;
@@ -111,7 +112,18 @@ margin: 20px 0;
   margin-bottom: 50px;
   color: white;
 }
-
+.another-flat-header{
+  display: flex;
+  /* border: solid; */
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.another-flat-header .flat-number{
+  background-color: rgb(250, 120, 44);
+  transform: scale(.7);
+  font-size: 25px;
+}
 
 
 .housing-project{
@@ -119,34 +131,104 @@ margin: 20px 0;
     top: 60%;
     left: 50%;
     transform: translateX(-50%);
-    /* border: solid; */
+    border: solid rgb(218, 207, 207);
+    border-radius: 3px; 
     /* min-width: 22%; */
     /* min-height: 20%; */
     height: 200px;
     width: 200px;
-    
+    z-index: 20;
+    transition: .2s;
 }
 .housing-project img{
     width: 100%;
     height: 100%;
 }
 
+/* .zoom{
+  transform: scale(4.5) translate(0, 20%); */
+/* } */
+.overlay{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: .5; 
+  z-index: 10;
+  display: none;
+  transition: .2s;
+}
+.another-flats{
+  display: none;
+  width: 100%;
+  /* border: solid; */
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.another-flats .flat{
+  /* height: 200px; */
+  /* border: solid blue; */
+  background-color: beige;
+  margin: 5px;
+}
+.display-none{
+  display: none;
+}
+.line{
+  height: 1px;
+  width: 100%;
+  /* border: solid; */
+  background-color: rgb(209, 194, 194, .5);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.another-flats .sold{
+  text-align: center;
+  color: rgb(250, 120, 44);
+}
+.another-flats .button{
+  background-color: rgb(250, 120, 44);
+  text-align: center;
+  width: 80%;
+  border-radius: 5px;
+  color: white;
+  margin: auto;
+  margin-bottom: 15px;
+}
 @media (min-width: 568px) { 
        .housing-project{
            /* border: solid red; */
-           top: 40%;
+           top: 20%;
           left: 60%;
            transform: scale(2.5) ;
-           z-index:-1;
+           z-index:0;
            
        }
        .flat-card{
            left: 160px;
        }
-}
-@media (min-width: 768px) { 
-    .housing-project{
-        left: 50%;
-        transform: translateY(-50%) scale(4);
+      }
+      @media (min-width: 768px) { 
+        .housing-project{
+          /* left: 50%; */
+          top: 25%;
+          transform: scale(3);
+        }
+        .flat-card{
+          left: 320px;
+          width: 600px;
     }
- }
+     .housing-project:hover{
+      transform: translateY(60%) scale(4.5);
+      cursor: pointer;
+      z-index: 30;
+     
+    } 
+    .housing-project:hover ~ .overlay{
+      display: block;
+      
+    } 
+    .another-flats{
+      display: flex;
+    }
+  }
