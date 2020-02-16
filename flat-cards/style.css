@@ -63,6 +63,11 @@ body{
   border: solid;
   
 } */
+.vertical-line{
+  height: 100%;
+  background-color: black;
+  width: 2px;
+}
 .flat-number{
   width: 70px;
   height: 40px;
@@ -77,12 +82,14 @@ body{
   display: flex;
   width: 100%;
 /*   border: solid; */
+height: 30px;
 margin: 20px 0;
+align-items: center;
   justify-content: space-around;
 }
 .flat-card .description .rooms-number{
-  border-right: solid;
-  border-left: solid;
+  /* border-right: solid;
+  border-left: solid; */
   padding: 0 20px;
   margin-bottom: 10px;
 }
@@ -174,6 +181,9 @@ margin: 20px 0;
 .display-none{
   display: none;
 }
+.border-solid{
+  border: solid red;
+}
 .line{
   height: 1px;
   width: 100%;
@@ -193,6 +203,7 @@ margin: 20px 0;
   border-radius: 5px;
   color: white;
   margin: auto;
+  margin-top: 15px;
   margin-bottom: 15px;
 }
 @media (min-width: 568px) { 
@@ -215,8 +226,8 @@ margin: 20px 0;
           transform: scale(3);
         }
         .flat-card{
-          left: 320px;
-          width: 600px;
+          left: 420px;
+          width: 800px;
     }
      .housing-project:hover{
       transform: translateY(60%) scale(4.5);
