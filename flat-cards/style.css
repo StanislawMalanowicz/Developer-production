@@ -131,7 +131,7 @@ margin: 20px 0;
     top: 60%;
     left: 50%;
     transform: translateX(-50%);
-    border: solid rgb(218, 207, 207);
+    /* border: solid rgb(218, 207, 207); */
     border-radius: 3px; 
     /* min-width: 22%; */
     /* min-height: 20%; */
