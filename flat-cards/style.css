@@ -55,14 +55,19 @@ body{
   display: flex;
   /* border: solid; */
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   margin-top: 20px;
 }
-/* .flat-card .title h1{
-  border: solid;
-  
-} */
+.flat-card .title h1, .flat-card .title .flat-number{
+  /* border: solid; */
+  margin: 5px;
+}
+.flat-card .title .flat-number{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
 .vertical-line{
   height: 100%;
   background-color: black;
@@ -130,6 +135,8 @@ align-items: center;
   background-color: rgb(250, 120, 44);
   transform: scale(.7);
   font-size: 25px;
+  color: white;
+  font-weight: bold;
 }
 
 
@@ -177,6 +184,7 @@ align-items: center;
   /* border: solid blue; */
   background-color: beige;
   margin: 5px;
+  border-radius: 10px;
 }
 .display-none{
   display: none;
